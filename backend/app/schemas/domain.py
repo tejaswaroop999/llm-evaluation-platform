@@ -17,6 +17,18 @@ class EvaluationCase(DomainModel):
     metadata: dict[str, Any] = Field(default_factory=dict)
 
 
+class DatasetCreate(DomainModel):
+    name: str = Field(min_length=1)
+    description: str | None = None
+    cases: list[EvaluationCase] = Field(default_factory=list)
+
+
+class DatasetUpdate(DomainModel):
+    name: str | None = Field(default=None, min_length=1)
+    description: str | None = None
+    cases: list[EvaluationCase] | None = None
+
+
 class Dataset(DomainModel):
     id: UUID = Field(default_factory=uuid4)
     name: str = Field(min_length=1)

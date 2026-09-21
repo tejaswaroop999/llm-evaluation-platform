@@ -1,5 +1,7 @@
 from app.schemas.domain import (
 	Dataset,
+	DatasetCreate,
+	DatasetUpdate,
 	EvaluationCase,
 	EvaluationResult,
 	EvaluationRun,
@@ -9,6 +11,8 @@ from app.schemas.domain import (
 
 __all__ = [
 	"Dataset",
+	"DatasetCreate",
+	"DatasetUpdate",
 	"EvaluationCase",
 	"EvaluationResult",
 	"EvaluationRun",
