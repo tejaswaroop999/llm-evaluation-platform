@@ -3,19 +3,16 @@ __pycache__/
 *.py[cod]
 .venv/
 .pytest_cache/
-
-# Env
+# Environment
 .env
 .env.local
-
 # Node
 node_modules/
 .next/
-
-# DB
+# Generated evaluation records contain prompts and outputs
 *.db
-
-# OS / editors
+backend/data/
+# Editors
 .DS_Store
 .vscode/
 .idea/

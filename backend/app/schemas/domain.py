@@ -71,6 +71,7 @@ class EvaluationResult(DomainModel):
     expected_output: str
     actual_output: str | None = None
     passed: bool | None = None
+    reason: str | None = None
     score: float | None = Field(default=None, ge=0, le=1)
     latency_ms: float | None = Field(default=None, ge=0)
     input_tokens: int | None = Field(default=None, ge=0)
